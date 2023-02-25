@@ -1,0 +1,87 @@
+<app-header [isAuthenticated]="isAuthenticated"></app-header>
+
+<div class="section">
+    <div class="container">
+        <div class="form">
+            <!-- <form (submit)="formSubmit($event)"> -->
+            
+            <div class="form-title">
+                <img src="../../../assets/image/icons/back.svg" alt="">
+                <div class="title-text">
+                    <h3>Log in with Quantum</h3>
+                </div>
+            </div>
+
+            <div class="row1">
+                <label class="option">
+                    <!-- <img src="../image/icons/radio-button-on.svg" alt=""> -->
+                    <div class="radio-btn">
+                        <input type="radio" value="district" name="school-radio" id="district" (change)="radioChange($event)" checked>
+                        <span id="checked-span-1" class="checked-span"></span>
+                    </div>
+                    
+                    <span class="radio-text">District</span>
+                </label>
+                <label class="option">
+                    <div id="independent-div" class="radio-btn">
+                        <input type="radio" value="independent" name="school-radio" id="independent" (change)="radioChange($event)">
+                        <span id="checked-span-2" class="checked-span"></span>
+                        
+                    </div>
+                    <span class="radio-text">Independent school</span>
+                </label>
+            </div>
+
+            <div class="row2">
+                <label for="state" class="label">State*</label>
+                <div>
+                    <select id="stateSelect" class="select no-outline">
+                        <option selected>Alabama</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row3">
+                <label for="district" class="label">District*</label>
+                <div>
+                    <select id="districtSelect" class="select no-outline">
+                        <option selected>Alabama School District</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row4">
+                <input type="text" class="input no-outline" placeholder="Username/Email ID*">
+
+                <a class="anchor" href="#">FORGOT USERNAME?</a>
+            </div>
+
+            <div class="row5">
+                <div class="border">
+                    <input id="password" type="password" class="no-outline" placeholder="Password*">
+                    <img id="preview" src="../../../assets/image/icons/preview.svg" alt="">
+                </div>
+                
+
+                <a class="anchor" href="#">FORGOT PASSWORD?</a>
+            </div>
+
+            <div class="row6">
+                <label for="checkbox-input">
+                    <input id="checkbox-input" type="checkbox" checked>
+                    <span id="check"></span>
+                    <!-- <img id="check" src="../image/icons/checkbox-checked.svg" alt=""> -->
+                    <div class="remember-text">Remember Me</div>
+                </label>
+            </div>
+
+            <div class="row7">
+                <button class="btn" type="submit">LOG IN</button>
+            </div>
+        <!-- </form> -->
+
+        </div>
+    </div>
+    
+</div>
+<app-footer></app-footer>

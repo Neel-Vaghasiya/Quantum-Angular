@@ -1,0 +1,47 @@
+@import "../../../assets/style";
+
+
+.footer {
+    background-color: $backgroundColor;
+    width: 100%;
+    font-family: quicksand-semibold;
+    
+
+    .bottom-nav {
+        text-align: center;
+        font-size: 14px;
+
+        a {
+            color: $greenText;
+            text-decoration: none;
+        }
+
+        .bottom-nav-items {
+            border-right: $lightBorder;
+            padding-right: 8px;
+            margin-right: 10px;
+        }
+    }
+
+    .copyright {
+        padding-left: 24px;
+        padding-right: 24px;
+        color: $footerTextColor;
+        background-color: $footerBackgroundColor;
+        margin-top: 16px;
+        @include flexCenter();
+        height: 40px;
+
+        .footer-logo {
+            border-right: $lightBorder;
+            padding-right: 16px;
+            margin-right: 16px;
+        }
+
+        .footer-text {
+            span {
+                font-family: quicksand-bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.footer {
+  background-color: #EEEEEE;
+  width: 100%;
+  font-family: quicksand-semibold;
+}
+.footer .bottom-nav {
+  text-align: center;
+  font-size: 14px;
+}
+.footer .bottom-nav a {
+  color: #1F7A54;
+  text-decoration: none;
+}
+.footer .bottom-nav .bottom-nav-items {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  padding-right: 8px;
+  margin-right: 10px;
+}
+.footer .copyright {
+  padding-left: 24px;
+  padding-right: 24px;
+  color: #616161;
+  background-color: #E0E1E1;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.footer .copyright .footer-logo {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  padding-right: 16px;
+  margin-right: 16px;
+}
+.footer .copyright .footer-text span {
+  font-family: quicksand-bold;
+}/*# sourceMappingURL=footer.component.css.map */
