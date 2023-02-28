@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppModule } from '../app.module';
 import { HeaderComponent } from '../shared/header/header.component';
 import { SharedModule } from '../shared/shared.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    AppRoutingModule
   ],
   exports: [
     LoginComponent

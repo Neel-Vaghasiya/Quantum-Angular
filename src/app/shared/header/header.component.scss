@@ -125,9 +125,7 @@
 
         #hamburger-list {
             display: none;
-            // display: inline-block;
             cursor: pointer;
-            // position: relative;
 
             #verticle-navbar {
                 visibility: visible;
@@ -137,7 +135,6 @@
             }
 
             .verticle-nav {
-                // height: 288px;
                 visibility:hidden;
                 opacity: 0;
                 z-index: 2;
@@ -150,7 +147,6 @@
                 background-color: $whiteColor;
                 top: 59px;
                 right: 16px;   
-                // display: none; 
                 border-radius: 2px;
     
                 ul {
@@ -162,7 +158,6 @@
                         transition: all 0.3s ease;
                         margin: 0;
                         display: block;
-                        // height: 18px;
                         padding: 15px 24px 15px 16px;
                         div {
                             a {
@@ -177,7 +172,7 @@
                     }
                     .selected {
                         background-color: #F3F3F3;
-                        // height: 66px;
+                    
                         padding-bottom: 0;
                         div {
                             padding-bottom: 15px;
@@ -210,8 +205,6 @@
                             display: flex;
                             justify-content: space-between;
                             div {
-                                // display: block;
-                                // transform: rotate(180deg);
                                 padding: 0;
                                 width: 12px;
                                 height: 12px;
@@ -255,18 +248,9 @@
     .header {
         .nav-items {
             #hamburger-list {
-                // @include flexCenter();
-                // display: flex;
                 display: flex;
 
             }
         }
     }
-    // .header{
-        // min-width: 480px;
-        // min-width: 100%;
-        // padding-right: 24px;
-        // padding-left: 24px;
-
-    // }
 }

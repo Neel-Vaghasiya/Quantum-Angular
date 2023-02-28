@@ -1,18 +1,13 @@
 @import "../../../assets/style";
 
 .container {
-    
-        
-    // @include flexCenter();
-    min-height: 80vh;
-    // height: 100%;
-    // min-height: fit-content;
+     
+    min-height: 80vh; 
 
     .section {
         width: 100%;
         @include flexCenter();
-        flex-direction: column;
-        // text-align: center;
+        flex-direction: column; 
         .app-courses {
             width: 100%;
             display: flex;

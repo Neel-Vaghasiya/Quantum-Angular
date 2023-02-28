@@ -54,7 +54,7 @@
             transition-delay: 0s, 0s, 0.1s;
         }
         .announcement-div {
-            // display: none;
+             
             visibility:hidden;
             opacity: 0;
             z-index: 2;
@@ -67,7 +67,7 @@
             top: 44.5px;
             right: -11px;
             
-            // border: 2px solid black;
+             
             border-radius: 2px;
             box-shadow: 0px 3px 6px #00000029;
             background-color: #FFFFEE;
@@ -75,7 +75,7 @@
             overflow-y:hidden;
 
             ul {
-                // border: 2px solid black;
+                
                 max-height: 534px;
                 overflow-y: overlay;
                 
@@ -94,8 +94,7 @@
                                 background-image: url("../../../assets/image/icons/dash-circle.svg");
                                 background-size: 16px;
                                 filter: invert(35%) sepia(7%) saturate(6227%) hue-rotate(107deg) brightness(96%) contrast(76%);
-                                
-                                // background-position: center;
+                                 
                                 width: 16px;
                                 height: 16px;
                                 background-repeat: no-repeat;
@@ -116,8 +115,7 @@
                                 }
                             }
                         }
-                        .line2 {
-                            // font-family: quicksand-bold;
+                        .line2 { 
                             display: block;
                             font-size: 14px;
                             div {

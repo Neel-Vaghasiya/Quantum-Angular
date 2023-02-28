@@ -51,8 +51,7 @@
             transform: translateY(0);
             transition-delay: 0s, 0s, 0.1s;
         }
-        .alert-div {
-            // display: none;
+        .alert-div { 
             visibility:hidden;
             opacity: 0;
             z-index: 2;
@@ -65,16 +64,14 @@
             top: 44.5px;
             right: -11px;
             
-            
-            // border: 2px solid black;
+             
             border-radius: 2px;
             box-shadow: 0px 3px 6px #00000029;
             background-color: #FFFFEE;
             font-family: quicksand-semibold;
             overflow-y:hidden;
     
-            ul {
-                // border: 2px solid black;
+            ul { 
                 max-height: 534px;
                 overflow-y: overlay;
                 
@@ -86,19 +83,8 @@
                     display: block;
                     border-bottom: 1px solid #2222221F;
                     div {
-                        div {
+                        div { 
                             
-                            // .is-shown-icon {
-                            //     background-image: url("../image/icons/checkbox-checked.svg");
-                            //     background-size: 21px;
-                                
-                            //     background-position: center;
-                            //     width: 16px;
-                            //     height: 16px;
-                            //     background-repeat: no-repeat;
-                            //     border-radius: 50%;
-                                
-                            // }
                             .is-shown-icon {
                                 background-image: url("../../../assets/image/icons/dash-circle.svg");
                                 background-size: 16px;

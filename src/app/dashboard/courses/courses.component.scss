@@ -51,8 +51,7 @@
     
     grid-gap: 25px 24px;
 
-    .content1 {
-        // max-width: 600px;
+    .content1 { 
         background-color: $whiteColor;
         padding: 24px 16px 0px 24px;
         font-size: 12px;
@@ -139,8 +138,7 @@
         }
 
         .icons {
-            .unavailable-icon {
-                // filter: brightness(10%);
+            .unavailable-icon { 
                 opacity: 50%;
             }
             button {
