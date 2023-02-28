@@ -1,0 +1,61 @@
+.container {
+  min-height: 80vh;
+  width: auto;
+  height: 100%;
+  background-color: #EEEEEE;
+  padding: 24px 24px 33px 24px;
+}
+.container .section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .section .app-courses {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .overview {
+  width: 100%;
+  background-color: #8DDC97;
+  height: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+.container .overview .courses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .overview .courses .overview-span {
+  font-family: quicksand-bold;
+  font-size: 24px;
+  margin-left: 10px;
+  margin-right: 6px;
+}
+.container .overview .course {
+  width: 100%;
+  height: 60px;
+  margin-top: auto;
+  border-bottom: 4px solid #222222;
+}
+.container .courses-heading {
+  width: 100%;
+}
+
+@media (max-width: 880px) {
+  .container {
+    min-width: 480px;
+  }
+  app-header {
+    min-width: 480px;
+  }
+}/*# sourceMappingURL=dashboard.component.css.map */

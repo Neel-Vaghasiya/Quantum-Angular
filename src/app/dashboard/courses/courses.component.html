@@ -1,0 +1,85 @@
+<div class="courses-heading">
+    <div class="num">
+        Showing {{courses_data.length}} of {{courses_data.length}} courses
+    </div>
+    <div class="sort">
+        Sort By: 
+        <select class="select no-outline">
+            <option selected>Course Name</option>
+        </select>
+        <img src="../../../assets/image/icons/sort.svg" alt="">
+    </div>
+    
+</div>
+
+<div class="main-content" *ngIf="courses_data">
+    <div class="content1" *ngFor="let course of courses_data" [ngClass]="{'expired-content': course.is_Expired}">
+        <div class="expired-badge" *ngIf="course.is_Expired">
+            EXPIRED
+        </div>
+        <div class="description">
+            <div class="course-image">
+                <img src={{course.thumbnail}} alt="">
+            </div>
+            <div class="course-text">
+                <div class="title">
+                    {{course.title}}
+                </div>
+                <div class="sub-grade">
+                    <span class="subject">{{course.subject}}</span>
+                    <span class="grade">Grade {{course.grade}} <span class="min">{{ course.grade_change > 0 ? '+' : ''}}
+                        {{course.grade_change}}
+                    </span></span>
+                </div>
+                <div class="size" *ngIf="course.units > 0">
+                    <span class="size-num">{{course.units}}</span>
+                    Units&nbsp;
+                    <span class="size-num">{{course.lessons}}</span>
+                    Lessons&nbsp;
+                    <span class="size-num">{{course.topics}}</span>
+                    Topics
+                </div>
+                <div class="division">
+                    <select class="no-outline div-select">
+                        <option selected *ngIf="course.classes.length <= 0">No Classes</option>
+                        <option selected *ngIf="course.classes.length == total_classes">All Classes</option>
+                        <ng-container *ngIf="course.classes.length > 0">
+                            <option [selected]="isFirst && course.classes.length != total_classes" *ngFor="let cls of course.classes; first as isFirst">{{cls}}</option>
+                        </ng-container>
+                    </select>
+                </div>
+                <div class="cap-dur">
+                    <span class="subject" *ngIf="course.classes.length > 0">{{course.students}} Students</span>
+                    
+                    <span class="duration" *ngIf="course.classes.length > 0 && course.start_date!==''">{{course.start_date}} - {{course.end_date}}</span>
+                </div>
+            </div>
+            <div class="star" [ngClass]="{'unfavourite': !course.is_favourite}">
+                <img src="../../../assets/image/icons/favourite.svg" alt="">
+            </div>
+        </div>
+
+        <div class="horizontle-border">
+
+        </div>
+
+        <div class="icons">
+            <!-- <a href="#"> -->
+            <button class="icon-btn">
+                <img src="../../../assets/image/icons/preview.svg" alt="">
+            </button>
+            <!-- </a> -->
+            
+            <button class="icon-btn">
+                <img class="manage_course" [ngClass]="{'unavailable-icon': !course.is_manage_course}" src="../../../assets/image/icons/manage course.svg" alt="">
+            </button>
+            <button class="icon-btn">
+                <img class="grade_submission" [ngClass]="{'unavailable-icon': !course.is_grade_submission}" src="../../../assets/image/icons/grade submissions.svg" alt="">
+            </button>
+            <button class="icon-btn">
+                <img src="../../../assets/image/icons/reports.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+</div>

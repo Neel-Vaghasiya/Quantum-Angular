@@ -34,4 +34,10 @@
 }
 .footer .copyright .footer-text span {
   font-family: quicksand-bold;
+}
+
+@media (max-width: 880px) {
+  .footer {
+    min-width: 528px;
+  }
 }/*# sourceMappingURL=footer.component.css.map */

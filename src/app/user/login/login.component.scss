@@ -1,7 +1,7 @@
 @import "../../../assets/style";
 
     .section {
-        // min-width: 480px;
+        min-width: 527px;
         @include flexCenter();
         flex-direction: column;
         background-color: $backgroundColor;

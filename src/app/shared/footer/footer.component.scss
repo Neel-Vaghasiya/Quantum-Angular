@@ -5,6 +5,8 @@
     background-color: $backgroundColor;
     width: 100%;
     font-family: quicksand-semibold;
+    // position: sticky;
+    // bottom: 0;
     
 
     .bottom-nav {
@@ -43,5 +45,11 @@
                 font-family: quicksand-bold;
             }
         }
+    }
+}
+
+@media (max-width: 880px) {
+    .footer {
+        min-width: 528px;
     }
 }

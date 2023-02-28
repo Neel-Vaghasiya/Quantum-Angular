@@ -1,0 +1,23 @@
+<app-header [isAuthenticated]="isAuthenticated"></app-header>
+
+<div class="container">
+    <div class="section">
+
+        <div class="overview">
+            <div class="courses course">
+                <img src="../../../assets/image/icons/courses.svg" alt="">
+                <span id="courses-span" class="overview-span">{{courses.length}}</span> Courses
+            </div>
+            <div class="courses">
+                <img src="../../../assets/image/icons/classes.svg" alt="">
+                <span id="classes-span" class="overview-span">4</span> Classes
+            </div>
+        </div>
+
+        <app-courses class="app-courses" [courses_data]="courses" [total_classes]="total_classes"></app-courses>
+
+    </div>
+</div>
+
+<app-footer></app-footer>
+
