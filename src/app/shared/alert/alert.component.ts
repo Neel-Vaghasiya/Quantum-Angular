@@ -1,12 +1,24 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DatafetchService } from 'src/app/core/datafetch.service';
+import { AlertObject } from '../interfaces';
 
 @Component({
   selector: 'app-alert',
   templateUrl: './alert.component.html',
   styleUrls: ['./alert.component.css']
 })
-export class AlertComponent {
+export class AlertComponent implements OnInit{
   @Input() isEntered: boolean | undefined;
-  
+  alert_data: any = [];
+
+  constructor(private datafetch: DatafetchService) {
+
+  }
+
+  ngOnInit(): void {
+      this.datafetch.getAlerts().subscribe( res => {
+        this.alert_data = res.notifications;
+      })
+  }
 
 }

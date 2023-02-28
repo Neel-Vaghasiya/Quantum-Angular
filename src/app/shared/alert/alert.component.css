@@ -107,7 +107,8 @@
 .alert-anchor .alert .alert-div ul .alert-seen {
   background-color: #FFFFFF;
 }
-.alert-anchor .alert .alert-div ul .alert-seen .is-shown-icon {
+.alert-anchor .alert .alert-div ul .alert-seen div div .is-shown-icon {
+  background-image: none;
   background-image: url("../../../assets/image/icons/checkbox-checked.svg");
   background-size: 21px;
   filter: none;

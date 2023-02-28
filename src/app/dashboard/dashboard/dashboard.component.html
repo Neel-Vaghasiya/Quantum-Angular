@@ -14,7 +14,27 @@
             </div>
         </div>
 
-        <app-courses class="app-courses" [courses_data]="courses" [total_classes]="total_classes"></app-courses>
+        <div class="courses-heading">
+            <div class="num">
+                Showing {{courses.length}} of {{courses.length}} courses
+            </div>
+            <div class="sort">
+                Sort By: 
+                <select class="select no-outline">
+                    <option selected>Course Name</option>
+                </select>
+                <img src="../../../assets/image/icons/sort.svg" alt="">
+            </div>
+            
+        </div>
+        
+        <div class="main-content" *ngIf="courses">
+            <div class="content1" *ngFor="let course of courses" [ngClass]="{'expired-content': course.is_Expired}">
+
+                <app-courses class="app-courses" [course]="course" [total_classes]="total_classes"></app-courses>
+
+            </div>
+        </div>
 
     </div>
 </div>

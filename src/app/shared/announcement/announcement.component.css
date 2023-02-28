@@ -134,7 +134,7 @@
 .announcement-anchor div .announcement-div ul .announcement-seen {
   background-color: #FFFFFF;
 }
-.announcement-anchor div .announcement-div ul .announcement-seen .is-shown-icon {
+.announcement-anchor div .announcement-div ul .announcement-seen div div .is-shown-icon {
   background-image: url("../../../assets/image/icons/checkbox-checked.svg");
   background-size: 21px;
   filter: none;

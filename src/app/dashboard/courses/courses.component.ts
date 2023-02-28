@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit{
-  @Input() courses_data: any;
+  @Input() course: any;
   @Input() total_classes: any;
 
   ngOnInit() {
-    console.log(this.courses_data);
+    // console.log(this.courses_data);
   }
 
 }

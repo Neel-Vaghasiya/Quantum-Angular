@@ -1,0 +1,64 @@
+{
+    "notifications" : [
+        {
+            "pa": "Wilson Kumar",
+            "message": "No classes will be held on 21st Nov",
+            "course": "",
+            "attached_files": 2,
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+        },
+        {
+            "pa": "Wilson Kumar",
+            "message": "Guest lecture on Geometry on 20th September",
+            "course": "",
+            "attached_files": 2,
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+
+        },
+        {
+            "pa": "Wilson Kumar",
+            "message": "Additional course materials available on request",
+            "course": "Mathematics 101",
+            "attached_files": 0,
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": true
+
+        },
+        {
+            "pa": "Wilson Kumar",
+            "message": "No classes will be held on 21st Nov",
+            "course": "",
+            "attached_files": 0,
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+
+
+        },
+        {
+            "pa": "Wilson Kumar",
+            "message": "No classes will be held on 21st Nov",
+            "course": "",
+            "attached_files": 2,
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+
+        },
+        {
+            "pa": "Wilson Kumar",
+            "message": "No classes will be held on 21st Nov",
+            "course": "",
+            "attached_files": 2,
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": true
+
+        }
+    ]
+}

@@ -7,12 +7,12 @@
             </div>
             <div class="alert-div" id="{{isEntered ? 'alert-div-hover' : ''}}">
                 <div class="alert-subdiv">
-                    <ul class="alert-list">
-                        <li>
+                    <ul class="alert-list" >
+                        <li *ngFor="let alert of alert_data" [ngClass]="{'alert-seen': alert.isSeen}">
                             <div>
                                 <div class="line1 line">
                                     <div>
-                                        No classes will be held on 21st Nov
+                                        {{alert.message}}
                                     </div>
                                     <div class="is-shown-icon">
                                       
@@ -20,174 +20,22 @@
 
                                 </div>
 
-                                
+                                <div class="line2 line" *ngIf="alert.course!=''">
+                                    <span> Course:</span> {{alert.course}}
+                                </div>
+                                <div class="line2 line" *ngIf="alert.class!=''">
+                                    <span> Class:</span> {{alert.class}}
+                                </div>
+
                                 <div class="line3 line">
                                     <div class="announce-date">
-                                        15-Sep-2018 at 07:21 pm
+                                        {{alert.date}} at {{alert.time}}
                                     </div>
                                 </div>
 
                             </div>
                         </li>
-                        <li>
-                            <div>
-                                <div class="line1 line">
-                                    <div>
-                                        No classes will be held on 21st Nov
-                                    </div>
-                                    <div class="is-shown-icon">
-                                        
-                                    </div>
-
-                                </div>
-
-                                <div class="line2 line">
-                                    <span> Course:</span> Mathematics 101
-                                </div>
-                                
-                                <div class="line3 line">
-                                    <div class="announce-date">
-                                        15-Sep-2018 at 07:21 pm
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="alert-seen">
-                            <div>
-                                <div class="line1 line">
-                                    <div>
-                                        No classes will be held on 21st Nov
-                                    </div>
-                                    <div class="is-shown-icon">
-                                      
-                                    </div>
-
-                                </div>
-                                
-                                <div class="line3 line">
-                                    <div class="announce-date">
-                                        15-Sep-2018 at 07:21 pm
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="line1 line">
-                                    <div>
-                                        No classes will be held on 21st Nov
-                                    </div>
-                                    <div class="is-shown-icon">
-                                      
-                                    </div>
-
-                                </div>
-
-                                <div class="line2 line">
-                                    <span>Class:</span> Basics of Algebra
-                                </div>
-                                
-                                <div class="line3 line">
-                                    <div class="announce-date">
-                                        15-Sep-2018 at 07:21 pm
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="line1 line">
-                                    <div>
-                                        No classes will be held on 21st Nov
-                                    </div>
-                                    <div class="is-shown-icon">
-                                      
-                                    </div>
-
-                                </div>
-                                
-                                <div class="line3 line">
-                                    <div class="announce-date">
-                                        15-Sep-2018 at 07:21 pm
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="alert-seen">
-                            <div>
-                                <div class="line1 line">
-                                    <div>
-                                        No classes will be held on 21st Nov
-                                    </div>
-                                    <div class="is-shown-icon">
-                                         
-                                    </div>
-
-                                </div>
-
-                                <div class="line2 line">
-                                    <span>Course:</span> Advanced Mathematics
-                                </div>
-                                
-                                <div class="line3 line">
-                                    <div class="announce-date">
-                                        15-Sep-2018 at 07:21 pm
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li class="alert-seen">
-                            <div>
-                                <div class="line1 line">
-                                    <div>
-                                        No classes will be held on 21st Nov
-                                    </div>
-                                    <div class="is-shown-icon">
-                                       
-                                    </div>
-
-                                </div>
-
-                                <div class="line2 line">
-                                    <span>Course:</span> Advanced Mathematics
-                                </div>
-                                
-                                <div class="line3 line">
-                                    <div class="announce-date">
-                                        15-Sep-2018 at 07:21 pm
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <div class="line1 line">
-                                    <div>
-                                        No classes will be held on 21st Nov
-                                    </div>
-                                    <div class="is-shown-icon"> 
-                                    </div>
-
-                                </div>
-
-                                <div class="line2 line">
-                                    <span>Course:</span> Advanced Mathematics
-                                </div>
-                                
-                                <div class="line3 line">
-                                    <div class="announce-date">
-                                        15-Sep-2018 at 07:21 pm
-                                    </div>
-                                </div>
-
-                            </div>
-                        </li>
+                        
                         
                     </ul>
 

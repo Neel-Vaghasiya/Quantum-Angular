@@ -40,4 +40,25 @@ interface CoursesObject  {
     "is_manage_course": boolean
 }
 
-export { DataObject, CoursesObject }
+interface AlertObject {
+    "notifications" : {
+        "message": string,
+        "course": string,
+        "class": string,
+        "date": string,
+        "time": string,
+        "isSeen": boolean
+    }[]
+}
+
+interface AnnouncementObject {
+    "pa": string,
+    "message": string,
+    "course": string,
+    "attached_files": number,
+    "date": string,
+    "time": string,
+    "isSeen": boolean
+}
+
+export { DataObject, CoursesObject, AlertObject, AnnouncementObject }

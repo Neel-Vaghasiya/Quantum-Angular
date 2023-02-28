@@ -156,18 +156,23 @@
 
                 .announcement-seen {
                     background-color: $whiteColor;
-
-                    .is-shown-icon {
-                        background-image: url("../../../assets/image/icons/checkbox-checked.svg");
-                        background-size: 21px;
-                        filter: none;
-                        background-position: center;
-                        width: 16px;
-                        height: 16px;
-                        background-repeat: no-repeat;
-                        border-radius: 50%;
-                        
+                    div {
+                        div {
+                            .is-shown-icon {
+                                background-image: url("../../../assets/image/icons/checkbox-checked.svg");
+                                background-size: 21px;
+                                filter: none;
+                                background-position: center;
+                                width: 16px;
+                                height: 16px;
+                                background-repeat: no-repeat;
+                                border-radius: 50%;
+                                
+                            }
+                        }
                     }
+
+                    
                     
                 }
 

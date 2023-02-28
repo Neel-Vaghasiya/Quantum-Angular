@@ -1,0 +1,68 @@
+{
+    "notifications" : [
+        {
+            "message": "No classes will be held on 21st Nov",
+            "course": "",
+            "class": "",
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+        },
+        {
+            "message": "No classes will be held on 21st Nov",
+            "course": "Mathematics 101",
+            "class": "",
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+        },
+        {
+            "message": "No classes will be held on 21st Nov",
+            "course": "",
+            "class": "",
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": true
+        },
+        {
+            "message": "No classes will be held on 21st Nov",
+            "course": "",
+            "class": "Basics of Algebra",
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+        },
+        {
+            "message": "No classes will be held on 21st Nov",
+            "course": "",
+            "class": "",
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+        },
+        {
+            "message": "No classes will be held on 21st Nov",
+            "course": "Advanced Mathematics",
+            "class": "",
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": true
+        },
+        {
+            "message": "No classes will be held on 21st Nov",
+            "course": "Advanced Mathematics",
+            "class": "",
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": true
+        },
+        {
+            "message": "No classes will be held on 21st Nov",
+            "course": "Advanced Mathematics",
+            "class": "",
+            "date": "15-Sep-2018",
+            "time": "07:21 pm",
+            "isSeen": false
+        }
+    ]
+}
