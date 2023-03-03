@@ -5,11 +5,11 @@
 
         <div class="overview">
             <div class="courses course">
-                <img src="../../../assets/image/icons/courses.svg" alt="">
+                <img src="/assets/image/icons/courses.svg" alt="">
                 <span id="courses-span" class="overview-span">{{courses.length}}</span> Courses
             </div>
             <div class="courses">
-                <img src="../../../assets/image/icons/classes.svg" alt="">
+                <img src="/assets/image/icons/classes.svg" alt="">
                 <span id="classes-span" class="overview-span">4</span> Classes
             </div>
         </div>
@@ -23,15 +23,15 @@
                 <select class="select no-outline">
                     <option selected>Course Name</option>
                 </select>
-                <img src="../../../assets/image/icons/sort.svg" alt="">
+                <img src="/assets/image/icons/sort.svg" alt="">
             </div>
             
         </div>
         
-        <div class="main-content" *ngIf="courses">
+        <div class="main-content" *ngIf="courses.length > 0">
             <div class="content1" *ngFor="let course of courses" [ngClass]="{'expired-content': course.is_Expired}">
 
-                <app-courses class="app-courses" [course]="course" [total_classes]="total_classes"></app-courses>
+                <app-courses class="app-courses" [course]="course" [total_classes]="total_classes" *ngIf="course"></app-courses>
 
             </div>
         </div>

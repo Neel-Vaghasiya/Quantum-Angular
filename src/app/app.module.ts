@@ -6,20 +6,25 @@ import { CoreModule } from './core/core.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
-import { AlertComponent } from './shared/alert/alert.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    UserModule,
-    DashboardModule,
+  imports: [  
+    CommonModule,
+    AppRoutingModule,
     SharedModule,
+    BrowserModule,
+    
+    HttpClientModule,
     CoreModule,
-    AppRoutingModule
+    UserModule,
+    DashboardModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

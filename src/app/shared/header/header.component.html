@@ -1,13 +1,13 @@
 <Nav class="header">
     <div class="logo">
-        <img src="../../assets/image/icons/header_logo.svg" alt="">
+        <img src="/assets/image/icons/header_logo.svg" alt="">
     </div>
     <ul class="nav-items" *ngIf="isAuthenticated">
-        <li id="dashboard" class="big"><a href="#">DASHBOARD</a> </li>
-        <li class="big"><a href="#">CONTENT</a></li>
-        <li class="big"><a href="#">USERS</a></li>
-        <li class="big"><a href="#">REPORT</a></li>
-        <li class="big"><a href="#">ADMIN</a></li>
+        <li id="dashboard" class="big"><a routerLink="/dashboard">DASHBOARD</a> </li>
+        <li class="big"><a routerLink="/dashboard">CONTENT</a></li>
+        <li class="big"><a routerLink="/dashboard">USERS</a></li>
+        <li class="big"><a routerLink="/dashboard">REPORT</a></li>
+        <li class="big"><a routerLink="/dashboard">ADMIN</a></li>
         <li id="alert-list" (mouseleave)="OnMouseLeave()" (mouseenter)="OnMouseEnter()">
 
             <app-alert [isEntered]="isEntered"></app-alert>
@@ -21,9 +21,9 @@
         </li>
 
         <li>
-            <a href="#">
+            <a routerLink="/dashboard">
                 <div class="alert user-badge-icon">
-                    <img class="alert-icon" id="user" src="../../assets/image/icons/user.png" alt="">
+                    <img class="alert-icon" id="user" src="/assets/image/icons/user.png" alt="">
                     <div class="badge-text">
                         T
                     </div>
@@ -33,9 +33,9 @@
         </li>
 
         <li id="hamburger-list" (mouseenter)="OnMouseEnterHam()" (mouseleave)="OnMouseLeaveHam()">
-            <a class="hamburger-btn" href="#">
+            <a class="hamburger-btn" routerLink="/dashboard">
                 <div id="hamburger">
-                    <img src="../../assets/image/icons/hamburger-menu.svg" alt="">
+                    <img src="/assets/image/icons/hamburger-menu.svg" alt="">
                 </div>
             </a>
 
@@ -43,46 +43,46 @@
                 <ul class="verticle-ul">
                     <li>
                         <div>
-                            <a href="#">DASHBOARD</a>
+                            <a routerLink="/dashboard">DASHBOARD</a>
                         </div>
                     </li>
                     <li class="hamburger-item" (click)="OnHamItemClick(ref1)" #ref1 [ngClass] = "{'selected': ref1==clickedHamItem}">
                         <div>
-                            <a href="#">CONTENT</a>
+                            <a routerLink="/dashboard">CONTENT</a>
                             <div></div>
                         </div>
                         <ul class="sub-nav">
-                            <li><a href="#"> COURSE CATALOG </a></li>
+                            <li><a routerLink="/dashboard"> COURSE CATALOG </a></li>
                         </ul>
                     </li>
                     <li #ref2 class="hamburger-item" (click)="OnHamItemClick(ref2)" [ngClass] = "{'selected': ref2==clickedHamItem}">
                         <div>
-                            <a href="#">USERS</a>
+                            <a routerLink="/dashboard">USERS</a>
                             <div></div>
                         </div>
                         <ul class="sub-nav">
-                            <li><a href="#"> COURSE CATALOG </a></li>
-                            <li><a href="#"> COURSE CATALOG </a></li>
+                            <li><a routerLink="/dashboard"> COURSE CATALOG </a></li>
+                            <li><a routerLink="/dashboard"> COURSE CATALOG </a></li>
                         </ul>
                     </li>
                     <li #ref3 class="hamburger-item" (click)="OnHamItemClick(ref3)" [ngClass] = "{'selected': ref3==clickedHamItem}">
                         <div>
-                            <a href="#">REPORT</a>
+                            <a routerLink="/dashboard">REPORT</a>
                             <div></div>
                         </div>
                         <ul class="sub-nav">
-                            <li><a href="#"> COURSE CATALOG </a></li>
-                            <li><a href="#"> COURSE CATALOG </a></li>
+                            <li><a routerLink="/dashboard"> COURSE CATALOG </a></li>
+                            <li><a routerLink="/dashboard"> COURSE CATALOG </a></li>
                         </ul>
                     </li>
                     <li #ref4 class="hamburger-item" (click)="OnHamItemClick(ref4)" [ngClass] = "{'selected': ref4==clickedHamItem}">
                         <div>
-                            <a href="#">ADMIN</a>
+                            <a routerLink="/dashboard">ADMIN</a>
                             <div></div>
                         </div>
                         <ul class="sub-nav">
-                            <li><a href="#"> COURSE CATALOG </a></li>
-                            <li><a href="#"> COURSE CATALOG </a></li>
+                            <li><a routerLink="/dashboard"> COURSE CATALOG </a></li>
+                            <li><a routerLink="/dashboard"> COURSE CATALOG </a></li>
                         </ul>
                     </li>
                 </ul>

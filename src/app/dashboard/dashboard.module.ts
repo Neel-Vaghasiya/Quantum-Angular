@@ -12,10 +12,11 @@ import { CoursesComponent } from './courses/courses.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule  
   ],
   exports: [
-    DashboardComponent
+    DashboardComponent,
+    CoursesComponent
   ]
 })
 export class DashboardModule { }

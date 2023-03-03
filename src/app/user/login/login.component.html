@@ -5,7 +5,7 @@
         <div class="form">
             
             <div class="form-title">
-                <img src="../../../assets/image/icons/back.svg" alt="">
+                <img src="/assets/image/icons/back.svg" alt="">
                 <div class="title-text">
                     <h3>Log in with Quantum</h3>
                 </div>
@@ -52,17 +52,17 @@
             <div class="row4">
                 <input type="text" class="input no-outline" placeholder="Username/Email ID*">
 
-                <a class="anchor" href="#">FORGOT USERNAME?</a>
+                <a class="anchor" routerLink="/login">FORGOT USERNAME?</a>
             </div>
 
             <div class="row5">
                 <div class="border">
-                    <input id="password" type="password" class="no-outline" placeholder="Password*">
-                    <img id="preview" src="../../../assets/image/icons/preview.svg" alt="">
+                    <input id="password" type="{{preview ? 'text' : 'password'}}" class="no-outline" placeholder="Password*">
+                    <img id="preview" src="/assets/image/icons/preview.svg" alt="" (click)="preview = !preview">
                 </div>
                 
 
-                <a class="anchor" href="#">FORGOT PASSWORD?</a>
+                <a class="anchor" routerLink="/login">FORGOT PASSWORD?</a>
             </div>
 
             <div class="row6">

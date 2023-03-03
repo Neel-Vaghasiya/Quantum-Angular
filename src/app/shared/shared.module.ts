@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AlertComponent } from './alert/alert.component';
 import { AnnouncementComponent } from './announcement/announcement.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -15,7 +16,8 @@ import { AnnouncementComponent } from './announcement/announcement.component';
     AnnouncementComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,

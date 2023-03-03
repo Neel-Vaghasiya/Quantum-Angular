@@ -1,7 +1,7 @@
 
-    <a href="#" class="alert-anchor">
+    <a routerLink="/dashboard" class="alert-anchor">
         <div class="alert alert-badge-icon">
-            <img id="alert-icon-to-white" [style.filter] = "isEntered ? 'brightness(0) invert(1)' : 'none'" class="alert-icon" src="../../assets/image/icons/alerts.svg" alt="">
+            <img id="alert-icon-to-white" [style.filter] = "isEntered ? 'brightness(0) invert(1)' : 'none'" class="alert-icon" src="/assets/image/icons/alerts.svg" alt="">
             <div id="alert-number-badge" class="badge-number" *ngIf="!isEntered">
                 2
             </div>

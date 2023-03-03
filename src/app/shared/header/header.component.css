@@ -4,7 +4,7 @@
   width: auto;
   height: 56px;
   opacity: 80%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../assets/image/header_pattern.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/assets/image/header_pattern.png");
   opacity: 100%;
   display: flex;
   align-items: center;
@@ -182,7 +182,7 @@
   width: 12px;
   height: 12px;
   transition: all 0.3s ease;
-  background-image: url("../../../assets/image/icons/down-arrow.svg");
+  background-image: url("/assets/image/icons/down-arrow.svg");
   background-size: 12px;
   background-position: top right;
   background-repeat: no-repeat;

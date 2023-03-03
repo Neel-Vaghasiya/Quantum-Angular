@@ -115,6 +115,9 @@
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
+.section .container .form .row5 div #preview {
+  cursor: pointer;
+}
 .section .container .form .row5 input {
   color: #666666;
   font-size: 16px;
@@ -153,7 +156,7 @@
   opacity: 0;
   z-index: 5;
   background-color: green;
-  background-image: url(../../../assets/image/icons/checkbox-checked.svg);
+  background-image: url(/assets/image/icons/checkbox-checked.svg);
 }
 .section .container .form .row6 label span {
   position: absolute;
@@ -165,7 +168,7 @@
   width: 16px;
 }
 .section .container .form .row6 label input:checked ~ span {
-  background-image: url("../../../assets/image/icons/checkbox-checked.svg");
+  background-image: url("/assets/image/icons/checkbox-checked.svg");
   background-position: center;
   border: none;
   height: 20px;
@@ -203,7 +206,7 @@
      -moz-appearance: none;
           appearance: none;
   color: #222222;
-  background-image: url("../../../assets/image/icons/arrow-down.svg");
+  background-image: url("/assets/image/icons/arrow-down.svg");
   background-repeat: no-repeat;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   background-position: right 0px center;

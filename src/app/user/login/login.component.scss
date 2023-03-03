@@ -129,6 +129,10 @@
                         @include flexCenter();
                         justify-content: space-between;
                         border-bottom: $lightBorder;
+
+                        #preview {
+                            cursor: pointer;
+                        }
                     }
                     input {
                         color: $lightFont;
@@ -172,7 +176,7 @@
                             opacity: 0; 
                             z-index: 5;
                             background-color: green;
-                            background-image: url(../../../assets/image/icons/checkbox-checked.svg);
+                            background-image: url(/assets/image/icons/checkbox-checked.svg);
                         }
 
                         span {
@@ -187,7 +191,7 @@
                         }
 
                         input:checked ~ span {
-                            background-image: url("../../../assets/image/icons/checkbox-checked.svg");
+                            background-image: url("/assets/image/icons/checkbox-checked.svg");
                             background-position: center;
                             border: none;
                             height: 20px;
@@ -228,7 +232,7 @@
                     @include font(16px, bold);
                     appearance: none;
                     color: $darkFont;
-                    background-image: url("../../../assets/image/icons/arrow-down.svg");
+                    background-image: url("/assets/image/icons/arrow-down.svg");
                     background-repeat: no-repeat;
                     border-bottom: $lightBorder;
                     background-position: right 0px center;

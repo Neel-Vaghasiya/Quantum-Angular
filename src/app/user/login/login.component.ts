@@ -6,7 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent{
-    @Input() isAuthenticated: any;
+    isAuthenticated: boolean= false;
+    preview: boolean = false;
     constructor() {
       this.isAuthenticated = false;
     }

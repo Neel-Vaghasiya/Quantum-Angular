@@ -8,7 +8,7 @@ import { CoursesObject, DataObject } from 'src/app/shared/interfaces';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit{
-  @Input() isAuthenticated: boolean;
+  isAuthenticated: boolean = true;
   courses: CoursesObject[] = [];
   res: any;
   total_classes: number = 0;

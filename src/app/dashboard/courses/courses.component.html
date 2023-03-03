@@ -1,8 +1,8 @@
 
-<div class="expired-badge" *ngIf="course.is_Expired">
+<div class="expired-badge" *ngIf="course && course.is_Expired">
     EXPIRED
 </div>
-<div class="description">
+<div class="description" *ngIf="course">
     <div class="course-image">
         <img src={{course.thumbnail}} alt="">
     </div>
@@ -40,7 +40,7 @@
         </div>
     </div>
     <div class="star" [ngClass]="{'unfavourite': !course.is_favourite}">
-        <img src="../../../assets/image/icons/favourite.svg" alt="">
+        <img src="/assets/image/icons/favourite.svg" alt="">
     </div>
 </div>
 
@@ -48,18 +48,18 @@
 
 </div>
 
-<div class="icons"> 
+<div class="icons" *ngIf="course"> 
     <button class="icon-btn">
-        <img src="../../../assets/image/icons/preview.svg" alt="">
+        <img src="/assets/image/icons/preview.svg" alt="">
     </button> 
     
     <button class="icon-btn">
-        <img class="manage_course" [ngClass]="{'unavailable-icon': !course.is_manage_course}" src="../../../assets/image/icons/manage course.svg" alt="">
+        <img class="manage_course" [ngClass]="{'unavailable-icon': !course.is_manage_course}" src="/assets/image/icons/manage course.svg" alt="">
     </button>
     <button class="icon-btn">
-        <img class="grade_submission" [ngClass]="{'unavailable-icon': !course.is_grade_submission}" src="../../../assets/image/icons/grade submissions.svg" alt="">
+        <img class="grade_submission" [ngClass]="{'unavailable-icon': !course.is_grade_submission}" src="/assets/image/icons/grade submissions.svg" alt="">
     </button>
     <button class="icon-btn">
-        <img src="../../../assets/image/icons/reports.svg" alt="">
+        <img src="/assets/image/icons/reports.svg" alt="">
     </button>
 </div>

@@ -1,6 +1,6 @@
-<a href="#" class="announcement-anchor">
+<a routerLink="/dashboard" class="announcement-anchor">
     <div class="alert announcement-badge-icon">
-        <img id="announcement-icon-to-white" [style.filter] = "isEnteredAnc ? 'brightness(0) invert(1)' : 'none'" class="alert-icon" src="../../assets/image/icons/announcements.svg" alt="">
+        <img id="announcement-icon-to-white" [style.filter] = "isEnteredAnc ? 'brightness(0) invert(1)' : 'none'" class="alert-icon" src="/assets/image/icons/announcements.svg" alt="">
         <div id="announcement-number-badge" class="badge-number" *ngIf="!isEnteredAnc">
             1
         </div>
@@ -28,7 +28,7 @@
                             
                             <div class="line4 line">
                                 <div class="attach">
-                                    <img src="../../assets/image/icons/attachment.png" alt=""  *ngIf="announcement.attached_files != 0">
+                                    <img src="/assets/image/icons/attachment.png" alt=""  *ngIf="announcement.attached_files != 0">
                                     <span  *ngIf="announcement.attached_files != 0">{{announcement.attached_files}} files are attached</span>
                                 </div>
                                 <div class="announce-date">
