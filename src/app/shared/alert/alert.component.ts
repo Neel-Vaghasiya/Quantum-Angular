@@ -17,7 +17,9 @@ export class AlertComponent implements OnInit{
 
   ngOnInit(): void {
       this.datafetch.getAlerts().subscribe( res => {
+        if(res && res.notifications) {
         this.alert_data = res.notifications;
+        }
       })
   }
 

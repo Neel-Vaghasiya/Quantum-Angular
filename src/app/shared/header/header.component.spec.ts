@@ -1,4 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { SharedModule } from '../shared.module';
 
 import { HeaderComponent } from './header.component';
 
@@ -8,6 +10,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule,SharedModule],
       declarations: [ HeaderComponent ]
     })
     .compileComponents();
@@ -83,6 +86,99 @@ describe('HeaderComponent', () => {
     const ref = 'test';
     component.OnHamItemClick(ref);
     expect(component.clickedHamItem).toBe(ref);
+  });
+
+  it('should display navigation items when authenticated', () => {
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    const navItems = fixture.nativeElement.querySelectorAll('.big');
+    expect(navItems.length).toEqual(5);
+    expect(navItems[0].textContent).toContain('DASHBOARD');
+    expect(navItems[1].textContent).toContain('CONTENT');
+    expect(navItems[2].textContent).toContain('USERS');
+    expect(navItems[3].textContent).toContain('REPORT');
+    expect(navItems[4].textContent).toContain('ADMIN');
+  });
+
+  it('should not display navigation items when not authenticated', () => {
+    component.isAuthenticated = false;
+    fixture.detectChanges();
+    const navItems = fixture.nativeElement.querySelectorAll('.nav-items li');
+    expect(navItems.length).toEqual(0);
+  });
+
+  it('should change value of isEntered on mouseenter event on alert-list', () => {
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    const alertList = fixture.nativeElement.querySelector('#alert-list');
+    alertList.dispatchEvent(new MouseEvent('mouseenter'));
+    expect(component.isEntered).toBeTruthy();
+  });
+
+  it('should change value of isEntered on mouseleave event on alert-list', () => {
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    const alertList = fixture.nativeElement.querySelector('#alert-list');
+    alertList.dispatchEvent(new MouseEvent('mouseenter'));
+    expect(component.isEntered).toBeTruthy();
+    alertList.dispatchEvent(new MouseEvent('mouseleave'));
+    expect(component.isEntered).toBeFalsy();
+  });
+
+  it('should change value of isEnteredAnc on mouseenter event on announcement-list', () => {
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    const announcementList = fixture.nativeElement.querySelector('#announcement-list');
+    announcementList.dispatchEvent(new MouseEvent('mouseenter'));
+    expect(component.isEnteredAnc).toBeTruthy();
+  });
+
+  it('should change value of isEnteredAnc on mouseleave event on announcement-list', () => {
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    const announcementList = fixture.nativeElement.querySelector('#announcement-list');
+    announcementList.dispatchEvent(new MouseEvent('mouseenter'));
+    expect(component.isEnteredAnc).toBeTruthy();
+    announcementList.dispatchEvent(new MouseEvent('mouseleave'));
+    expect(component.isEnteredAnc).toBeFalsy();
+  });
+
+  it('should expand the vertical nav bar on hamburger button hover', () => {
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    const hamburgerList = fixture.nativeElement.querySelector('#hamburger-list');
+    hamburgerList.dispatchEvent(new Event('mouseenter'));
+    fixture.detectChanges();
+    const verticleNavbar = fixture.nativeElement.querySelector('#verticle-navbar');
+    expect(verticleNavbar).toBeTruthy();
+  });
+
+  it('should collapse the vertical nav bar on mouse leave after delay', fakeAsync(() => {
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    const hamburgerList = fixture.nativeElement.querySelector('#hamburger-list');
+    hamburgerList.dispatchEvent(new Event('mouseenter'));
+    fixture.detectChanges();
+    const verticleNavbar = fixture.nativeElement.querySelector('#verticle-navbar');
+    expect(verticleNavbar).toBeTruthy();
+    hamburgerList.dispatchEvent(new Event('mouseleave'));
+    
+    setTimeout(() => {
+      fixture.detectChanges();
+      const collapsedNavbar = fixture.nativeElement.querySelector('#verticle-navbar');
+      expect(collapsedNavbar).toBeFalsy();
+    }, 300);
+    tick(300);
+  }));
+
+  it('should highlight selected hamburger menu item', () => {
+    component.isAuthenticated = true;
+    fixture.detectChanges();
+    const ref2 = fixture.nativeElement.querySelector('.hamburger-item:nth-child(2)');
+    ref2.dispatchEvent(new Event('click'));
+    fixture.detectChanges();
+    const selectedNavItem = fixture.nativeElement.querySelector('.hamburger-item.selected');
+    expect(selectedNavItem).toBe(ref2);
   });
 
 });

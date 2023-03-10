@@ -52,13 +52,15 @@ interface AlertObject {
 }
 
 interface AnnouncementObject {
-    "pa": string,
-    "message": string,
-    "course": string,
-    "attached_files": number,
-    "date": string,
-    "time": string,
-    "isSeen": boolean
+    "notifications" : {
+        "pa": string,
+        "message": string,
+        "course": string,
+        "attached_files": number,
+        "date": string,
+        "time": string,
+        "isSeen": boolean
+    }[]
 }
 
 export { DataObject, CoursesObject, AlertObject, AnnouncementObject }

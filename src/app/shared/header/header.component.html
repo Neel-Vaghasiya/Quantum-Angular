@@ -8,7 +8,7 @@
         <li class="big"><a routerLink="/dashboard">USERS</a></li>
         <li class="big"><a routerLink="/dashboard">REPORT</a></li>
         <li class="big"><a routerLink="/dashboard">ADMIN</a></li>
-        <li id="alert-list" (mouseleave)="OnMouseLeave()" (mouseenter)="OnMouseEnter()">
+        <li id="alert-list" class="alert-list-class" (mouseleave)="OnMouseLeave()" (mouseenter)="OnMouseEnter()">
 
             <app-alert [isEntered]="isEntered"></app-alert>
             

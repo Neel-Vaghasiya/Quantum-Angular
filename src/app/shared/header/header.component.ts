@@ -23,6 +23,7 @@ export class HeaderComponent implements OnInit{
 
   OnMouseEnter() {
     this.isEntered = true;
+    console.log("mouse entered")
   }
 
   OnMouseLeaveAnc() {

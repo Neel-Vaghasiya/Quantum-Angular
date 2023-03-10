@@ -10,16 +10,18 @@ import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
+    AlertComponent,
+    AnnouncementComponent,
     HeaderComponent,
     FooterComponent,
-    AlertComponent,
-    AnnouncementComponent
   ],
   imports: [
     CommonModule,
     AppRoutingModule
   ],
   exports: [
+    AlertComponent,
+    AnnouncementComponent,
     HeaderComponent,
     FooterComponent
   ]

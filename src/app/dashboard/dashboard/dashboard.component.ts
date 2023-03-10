@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit{
   isAuthenticated: boolean = true;
   courses: CoursesObject[] = [];
   res: any;
-  total_classes: number = 0;
+  total_classes: Number = 0;
 
   constructor(private datafetch: DatafetchService) {
     this.isAuthenticated = true;
@@ -22,9 +22,8 @@ export class DashboardComponent implements OnInit{
     this.total_classes = 4;
 
     this.datafetch.getData().subscribe(res => {
-      this.res = res;
-      this.courses = this.res.courses;
-      this.total_classes = this.res.total_classes;
+      this.courses = res.courses;
+      this.total_classes = res.total_classes;
     }); 
   }
 }

@@ -25,7 +25,7 @@
             Topics
         </div>
         <div class="division">
-            <select class="no-outline div-select">
+            <select class="no-outline div-select" [disabled]="course.classes.length <= 0">
                 <option selected *ngIf="course.classes.length <= 0">No Classes</option>
                 <option selected *ngIf="course.classes.length == total_classes">All Classes</option>
                 <ng-container *ngIf="course.classes.length > 0">

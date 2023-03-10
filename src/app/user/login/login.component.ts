@@ -11,11 +11,4 @@ export class LoginComponent{
     constructor() {
       this.isAuthenticated = false;
     }
-    radioChange(event: any) {
-      console.log(event.target.value);
-    }
-    formSubmit(event: SubmitEvent) {
-      event.preventDefault();
-      console.log(event.target);
-    }
 }

@@ -17,8 +17,8 @@ export class DatafetchService {
     this.alertUrl = "/assets/data/alert.json";
     this.announcementUrl = "/assets/data/announcement.json"
   }
-  getData() : Observable<DataObject[]> {
-    return this.http.get<DataObject[]>(this.url);
+  getData() : Observable<DataObject> {
+    return this.http.get<DataObject>(this.url);
   }
 
   getAlerts(): Observable<AlertObject> {
